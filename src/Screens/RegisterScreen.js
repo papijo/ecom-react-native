@@ -14,14 +14,14 @@ import { MaterialIcons, FontAwesome, Ionicons } from "@expo/vector-icons";
 
 const RegisterScreen = () => {
   return (
-    <Box flex={1} bg={Colors.black}>
-      <Image
+    <Box flex={1} bg={Colors.white}>
+      {/* <Image
         flex={1}
         alt="Logo"
         resizeMode="cover"
         w="full"
         source={require("../../assets/bk2.png")}
-      />
+      /> */}
       <Box
         w="full"
         h="full"
