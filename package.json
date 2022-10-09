@@ -15,17 +15,18 @@
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "native-base": "^3.4.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-native": "0.68.2",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-native": "0.69.6",
     "react-native-numeric-input": "^1.9.1",
-    "react-native-pager-view": "^5.4.15",
-    "react-native-safe-area-context": "^4.2.4",
-    "react-native-screens": "^3.11.1",
-    "react-native-svg": "^12.3.0",
+    "react-native-pager-view": "5.4.24",
+    "react-native-safe-area-context": "4.3.1",
+    "react-native-screens": "~3.15.0",
+    "react-native-svg": "12.3.0",
     "react-native-swipe-list-view": "^3.2.9",
     "react-native-tab-view": "^3.1.1",
-    "react-native-web": "0.17.7"
+    "react-native-tab-view-fixed": "^0.0.69",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
