@@ -10,7 +10,7 @@ import {
   HStack,
 } from "native-base";
 import Colors from "./../color";
-import { FontAwesome } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 import Buttone from "../Components/Button";
 
 const ShippingInputs = [
@@ -38,7 +38,12 @@ const ShippingScreen = () => {
       {/* Header */}
       <Center pb={15}>
         <HStack>
-          <FontAwesome name="truck" size={15} color={Colors.white} pt={3} />
+          <FontAwesome5
+            name="shipping-fast"
+            size={15}
+            color={Colors.white}
+            pt={3}
+          />
           <Text color={Colors.white} fontSize={14} bold ml={1}>
             DELIVERY DETAILS
           </Text>
