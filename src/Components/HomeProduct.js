@@ -22,7 +22,7 @@ const HomeProduct = () => {
         justifyContent="space-between"
         px={3}
       >
-        {products.map((product) => (
+        {products.slice(0, 4).map((product) => (
           <Pressable
             key={product._id}
             bgColor={Colors.gray}

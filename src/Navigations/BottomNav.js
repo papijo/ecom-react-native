@@ -12,6 +12,7 @@ import {
 } from "@expo/vector-icons";
 import ProfileScreen from "./../Screens/ProfileScreen";
 import CartScreen from "./../Screens/CartScreen";
+import StackNav from "./StackNav";
 
 const Tab = createBottomTabNavigator();
 const CustomTab = ({ children, onPress }) => (
@@ -32,7 +33,7 @@ const CustomTab = ({ children, onPress }) => (
 const BottomNav = () => {
   return (
     <Tab.Navigator
-      backBehavior="main"
+      backBehavior="Main"
       initialRouteName="Main"
       screenOptions={{
         tabBarShowLabel: false,
@@ -44,7 +45,7 @@ const BottomNav = () => {
       {/* Home */}
       <Tab.Screen
         name="Main"
-        component={HomeScreen}
+        component={StackNav}
         options={{
           tabBarIcon: ({ focused }) => (
             <Center>
