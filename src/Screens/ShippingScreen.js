@@ -12,6 +12,7 @@ import {
 import Colors from "./../color";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Buttone from "../Components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 const ShippingInputs = [
   {
@@ -33,6 +34,7 @@ const ShippingInputs = [
 ];
 
 const ShippingScreen = () => {
+  const navigation = useNavigation();
   return (
     <Box flex={1} safeArea bg={Colors.steelGray} py={5}>
       {/* Header */}
@@ -53,8 +55,8 @@ const ShippingScreen = () => {
       <Box h="full" bg={Colors.white} px={5}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <VStack space={6} mt={5}>
-            {ShippingInputs.map((m) => (
-              <FormControl>
+            {ShippingInputs.map((m, index) => (
+              <FormControl key={index}>
                 <FormControl.Label
                   _text={{ fontSize: "12", fontWeight: "bold" }}
                 >
@@ -67,7 +69,12 @@ const ShippingScreen = () => {
                 />
               </FormControl>
             ))}
-            <Buttone bg={Colors.steelGray} mt={5} color={Colors.white}>
+            <Buttone
+              onPress={() => navigation.navigate("PlaceOrder")}
+              bg={Colors.steelGray}
+              mt={5}
+              color={Colors.white}
+            >
               CONTINUE
             </Buttone>
           </VStack>

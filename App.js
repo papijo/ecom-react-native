@@ -6,6 +6,7 @@ import LoginScreen from "./src/Screens/LoginScreen";
 import RegisterScreen from "./src/Screens/RegisterScreen";
 import OrderScreen from "./src/Screens/OrderScreen";
 import BottomNav from "./src/Navigations/BottomNav";
+import PlaceOrderScreen from "./src/Screens/PlaceOrderScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,9 +20,10 @@ export default function App() {
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Bottom" component={BottomNav} />
           <Stack.Screen name="Register" component={RegisterScreen} />
           <Stack.Screen name="Order" component={OrderScreen} />
+          <Stack.Screen name="PlaceOrder" component={PlaceOrderScreen} />
+          <Stack.Screen name="Bottom" component={BottomNav} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

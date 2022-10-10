@@ -12,6 +12,7 @@ import {
 import React, { useState } from "react";
 import Colors from "./../color";
 import Buttone from "./Button";
+import { useNavigation } from "@react-navigation/native";
 
 const OrdersInfo = [
   {
@@ -37,6 +38,7 @@ const OrdersInfo = [
 ];
 
 const OrderModel = () => {
+  const navigation = useNavigation();
   const [showModel, setShowModel] = useState(false);
   return (
     <Center mb={1}>
@@ -95,10 +97,13 @@ const OrderModel = () => {
               bg={Colors.charcoal}
               h={45}
               _text={{ color: Colors.white }}
-              onPress={() => setShowModel(false)}
+              onPress={() => {
+                navigation.navigate("Home");
+                setShowModel(false);
+              }}
               _pressed={{ bg: Colors.main }}
             >
-              PLACE AN ORDER
+              PAY LATER
             </Button>
           </Modal.Footer>
         </Modal.Content>

@@ -28,7 +28,7 @@ const Profile = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <VStack space={3} mt={3} pb={10}>
           {Inputs.map((i, index) => (
-            <FormControl>
+            <FormControl key={index}>
               <FormControl.Label
                 _text={{ fontSize: "12px", fontWeight: "bold" }}
               >

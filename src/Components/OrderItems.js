@@ -17,7 +17,7 @@ const OrderItems = () => {
   return (
     <FlatList
       showsVerticalScrollIndicator={false}
-      data={products.slice(0, 3)}
+      data={products.slice(0, 4)}
       keyExtractor={(item) => item._id}
       renderItem={({ item }) => (
         <Pressable>

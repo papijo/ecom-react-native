@@ -7,7 +7,7 @@ const products = [
     description:
       "Lorem Ipsum is Simply Dummy text of the printing and typesetting world",
     price: 890,
-    countInStock: 7,
+    countInStock: 0,
     rating: 2.5,
     numReviews: 3,
   },
@@ -30,8 +30,8 @@ const products = [
     description:
       "Lorem Ipsum is Simply Dummy text of the printing and typesetting world",
     price: 315,
-    countInStock: 45,
-    rating: 2,
+    countInStock: 3,
+    rating: 4,
     numReviews: 74,
   },
   {

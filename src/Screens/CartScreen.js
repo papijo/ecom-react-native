@@ -13,8 +13,10 @@ import CartEmpty from "./../Components/CartEmpty";
 import CartItems from "../Components/CartItems";
 import { FontAwesome } from "@expo/vector-icons";
 import Buttone from "../Components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 const CartScreen = () => {
+  const navigation = useNavigation();
   return (
     <Box flex={1} safeArea bg={Colors.gray}>
       {/* Header */}
@@ -64,7 +66,12 @@ const CartScreen = () => {
 
         {/* Checkout */}
         <Center px={5}>
-          <Buttone bg={Colors.black} color={Colors.white} mt={10}>
+          <Buttone
+            onPress={() => navigation.navigate("Shipping")}
+            bg={Colors.black}
+            color={Colors.white}
+            mt={10}
+          >
             CHECKOUT
           </Buttone>
         </Center>

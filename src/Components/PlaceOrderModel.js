@@ -2,6 +2,7 @@ import { Center, Button, Modal, VStack, HStack, Text } from "native-base";
 import React, { useState } from "react";
 import Colors from "./../color";
 import Buttone from "./Button";
+import { useNavigation } from "@react-navigation/native";
 
 const OrdersInfo = [
   {
@@ -27,9 +28,10 @@ const OrdersInfo = [
 ];
 
 const PlaceOrderModel = () => {
+  const navigation = useNavigation();
   const [showModel, setShowModel] = useState(false);
   return (
-    <Center mb={1}>
+    <Center mb={5}>
       <Buttone
         onPress={() => setShowModel(true)}
         bg={Colors.onyx}
@@ -45,7 +47,11 @@ const PlaceOrderModel = () => {
           <Modal.Body>
             <VStack space={7}>
               {OrdersInfo.map((i, index) => (
-                <HStack alignItems="center" justifyContent="space-between">
+                <HStack
+                  key={index}
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
                   <Text fontWeight="medium"> {i.title} </Text>
                   <Text
                     color={i.color === "main" ? Colors.main : Colors.onyx}
@@ -64,7 +70,10 @@ const PlaceOrderModel = () => {
               bg={Colors.charcoal}
               h={45}
               _text={{ color: Colors.white }}
-              onPress={() => setShowModel(false)}
+              onPress={() => {
+                navigation.navigate("Order");
+                setShowModel(false);
+              }}
               _pressed={{ bg: Colors.main }}
             >
               PLACE AN ORDER
