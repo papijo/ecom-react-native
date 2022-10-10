@@ -15,12 +15,12 @@ export default function App() {
       <NavigationContainer>
         <StatusBar hidden={true} />
         <Stack.Navigator
-          initialRoutename="Bottom"
+          initialRoutename="Login"
           screenOptions={{ headerShown: false }}
         >
+          <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Bottom" component={BottomNav} />
           <Stack.Screen name="Register" component={RegisterScreen} />
-          <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Order" component={OrderScreen} />
         </Stack.Navigator>
       </NavigationContainer>
