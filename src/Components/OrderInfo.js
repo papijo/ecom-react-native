@@ -37,7 +37,7 @@ const OrderInfo = ({ icon, title, subTitle, text, success, danger }) => {
       )}
 
       {danger && (
-        <Center py={2} mt={2} rounded={5} w="full" bg={Colors.blueGray}>
+        <Center py={2} mt={2} rounded={5} w="full" bg={Colors.red}>
           <Text fontSize={12} color={Colors.gray}>
             Not Delivered
           </Text>

@@ -1,4 +1,14 @@
-import { Center, Button, Modal, VStack, HStack, Text } from "native-base";
+import {
+  Center,
+  Button,
+  Modal,
+  VStack,
+  HStack,
+  Text,
+  Pressable,
+  Image,
+  Hidden,
+} from "native-base";
 import React, { useState } from "react";
 import Colors from "./../color";
 import Buttone from "./Button";
@@ -26,7 +36,7 @@ const OrdersInfo = [
   },
 ];
 
-const PlaceOrderModel = () => {
+const OrderModel = () => {
   const [showModel, setShowModel] = useState(false);
   return (
     <Center mb={1}>
@@ -36,7 +46,7 @@ const PlaceOrderModel = () => {
         color={Colors.platinum}
         mt={5}
       >
-        SHOW TOTAL
+        SHOW PAYMENT & TOTAL
       </Buttone>
       <Modal isOpen={showModel} onClose={() => setShowModel(false)} size="lg">
         <Modal.Content maxWidth={350}>
@@ -45,7 +55,11 @@ const PlaceOrderModel = () => {
           <Modal.Body>
             <VStack space={7}>
               {OrdersInfo.map((i, index) => (
-                <HStack alignItems="center" justifyContent="space-between">
+                <HStack
+                  key={index}
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
                   <Text fontWeight="medium"> {i.title} </Text>
                   <Text
                     color={i.color === "main" ? Colors.main : Colors.onyx}
@@ -59,8 +73,25 @@ const PlaceOrderModel = () => {
             </VStack>
           </Modal.Body>
           <Modal.Footer>
+            <Pressable
+              w="full"
+              justifyContent="center"
+              bg={Colors.platinum}
+              h={45}
+              onPress={() => setShowModel(false)}
+            >
+              <Image
+                source={require("../../assets/paypal.png")}
+                alt="paypal"
+                resizeMode="contain"
+                h={35}
+                rounded={10}
+                overflow="hidden"
+              />
+            </Pressable>
             <Button
               flex={1}
+              mt={4}
               bg={Colors.charcoal}
               h={45}
               _text={{ color: Colors.white }}
@@ -76,4 +107,4 @@ const PlaceOrderModel = () => {
   );
 };
 
-export default PlaceOrderModel;
+export default OrderModel;
